@@ -29,13 +29,19 @@ int main(){
     cin>>n;
     int temp=n;
     for(int i=1;i<=n*2;i=i+2){
-            int patnum=1;
-            for(int k=temp;k>0;k--){
-                cout<<" ";
+            int patnum=i/2+1;
+            for(int k=temp-1;k>0;k--){
+                cout<<"\t";
             }
             for(int j=1;j<=i*2;j=j+2){
-                cout<<patnum++;
+                if(j<i){
+                    cout<<patnum++<<"\t";
+                }
+                else{
+                    cout<<patnum--<<"\t";
+                }
             }
+           
         cout<<"\n";
         temp--;
     }
