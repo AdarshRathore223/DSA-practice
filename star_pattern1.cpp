@@ -6,60 +6,61 @@ int main()
 {
     int num, space = 0;
     cin >> num;
-    int mid = (num+1) / 2;
+    int mid = (num + 1) / 2;
     for (int i = 0; i < mid; i++)
     {
 
         for (int j = 0; j < mid - i; j++)
         {
-            if (i == 0  && j == 0)
+
+            if (i == 0 && j == 0)
             {
                 continue;
             }
             else
             {
-                cout << "* ";
+                cout << "*\t";
             }
         }
 
-        for (int j = 0; j < space; j++)
+        for (int j = 1; j < space; j++)
         {
-            cout << "  ";
+            cout << " \t";
         }
-        space += i + 1;
+        space += 2;
 
         for (int j = 0; j < mid - i; j++)
         {
-            cout << "* ";
+            cout << "*\t";
         }
 
-        cout << "\n";
+        cout << " \t";
     }
-    space = 1;
+    space -= 4;
     for (int i = 0; i < mid - 1; i++)
     {
         for (int j = 0; j < i + 2; j++)
         {
-            cout << "* ";
+            cout << "*\t";
         }
-        for (int j = space; j > 0; j--)
+        for (int j = space - 1; j > 0; j--)
         {
-            cout << "  ";
+            cout << " \t";
         }
-        space -= i + 1;
-        
-        for (int j = 0; j < i + 2; j++)
+        space -= 2;
+
+        for (int j = 0; j <= i + 1; j++)
         {
-            if (i == 1 && j == 1)
+            if (i == mid-2 && j == 0)
             {
                 continue;
             }
             else
             {
-                cout << "* ";
+                cout << "*\t";
             }
         }
 
-        cout << "\n";
+        cout << "\\t";
     }
 }
