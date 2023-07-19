@@ -13,7 +13,7 @@ int main()
                 cout<<"*";
             }
             else if(i<=mid && j==0){
-                cout<<"*";
+                cout<<"*";  
             }
             else if(i==num-1 && j<=mid){
                 cout<<"*";
