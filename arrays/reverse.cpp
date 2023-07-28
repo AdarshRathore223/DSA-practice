@@ -1,34 +1,25 @@
 #include <iostream>
 #include <climits>
 using namespace std;
+
 int main()
 {
 	int num, arrnum;
 	cin >> num;
-	int arr[num];
-
-	bool nullzero = true;
+	int arr[num],inv[num];
 	for (int i = 0; i < num; i++)
 	{
 		cin >> arr[i];
 	}
-	int last = num - 1;
 
 	for (int i = 0; i < num; i++)
 	{
-		if (arr[i] != 0 || !nullzero)
-		{
-			swap(arr[i], arr[last]);
-			last--;
-			if (i == last)
-			{
-				break;
-			}
-			nullzero = false;
-		}
+		int pos = arr[i];
+		inv[pos] = i;
 	}
+
 	for (int i = 0; i < num; i++)
 	{
-		cout << arr[i] << " ";
+		cout << inv[i] << " ";
 	}
 }
